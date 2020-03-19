@@ -28,10 +28,6 @@ namespace WindowsFormsApp1
         }
 
         #endregion
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         #region ClearFuntions
         /// <summary>
@@ -43,6 +39,9 @@ namespace WindowsFormsApp1
         {
             // Clears the text from the user input text
             this.Sumbox.Text = string.Empty;
+
+            //focuses the user input text
+            FocusInputText();
         }
 
         private void Clear_Click(object sender, EventArgs e)
@@ -52,99 +51,303 @@ namespace WindowsFormsApp1
 
         private void Delete_Click(object sender, EventArgs e)
         {
+            //Delete the value after the selected posistion
+            DeleteTextValue();
 
+            //focuses the user input text
+            FocusInputText();
         }
 
         #endregion
 
         #region ButtonMethods
+
+        /// <summary>
+        /// Adds the number 1 to the text at the currently selected position
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
+            InsertTextValue("1");
 
+            //focuses the user input text
+            FocusInputText();
         }
 
+        /// <summary>
+        /// Adds the number 2 to the text at the currently selected position
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button2_Click(object sender, EventArgs e)
         {
+            InsertTextValue("2");
 
+            //focuses the user input text
+            FocusInputText();
         }
 
+        /// <summary>
+        /// Adds the number 3 to the text at the currently selected position
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button3_Click(object sender, EventArgs e)
         {
+            InsertTextValue("3");
 
+            //focuses the user input text
+            FocusInputText();
         }
 
+        /// <summary>
+        /// Adds the dot "." to the text at the currently selected position
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void DotButton_Click(object sender, EventArgs e)
         {
+            InsertTextValue(".");
 
+            //focuses the user input text
+            FocusInputText();
         }
 
+        /// <summary>
+        /// Adds the number 0 to the text at the currently selected position
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button0_Click(object sender, EventArgs e)
         {
+            InsertTextValue("0");
 
+            //focuses the user input text
+            FocusInputText();
         }
+
+        /// <summary>
+        /// Adds the number 9 to the text at the currently selected position
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button9_Click(object sender, EventArgs e)
         {
+            InsertTextValue("9");
 
+            //focuses the user input text
+            FocusInputText();
         }
 
+        /// <summary>
+        /// Adds the number 8 to the text at the currently selected position
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button8_Click(object sender, EventArgs e)
         {
+            InsertTextValue("8");
 
+            //focuses the user input text
+            FocusInputText();
         }
 
+        /// <summary>
+        /// Adds the number 7 to the text at the currently selected position
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button7_Click(object sender, EventArgs e)
         {
+            InsertTextValue("7");
 
+            //focuses the user input text
+            FocusInputText();
         }
 
+        /// <summary>
+        /// Adds the number 4 to the text at the currently selected position
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button4_Click(object sender, EventArgs e)
         {
+            InsertTextValue("4");
 
+            //focuses the user input text
+            FocusInputText();
         }
 
+        /// <summary>
+        /// Adds the number 5 to the text at the currently selected position
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button5_Click(object sender, EventArgs e)
         {
+            InsertTextValue("5");
 
+            //focuses the user input text
+            FocusInputText();
         }
 
+        /// <summary>
+        /// Adds the number 6 to the text at the currently selected position
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button6_Click(object sender, EventArgs e)
         {
+            InsertTextValue("6");
 
+            //focuses the user input text
+            FocusInputText();
         }
 
-        #endregion
-
-        #region OperatorFunctions
-        private void Percent_Click(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
-        private void Divide_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void Multiply_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void Negative_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Positive_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void SUM_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        #endregion 
         private void WhoCaresButton_Click(object sender, EventArgs e)
         {
 
+
         }
+        #endregion
+
+        #region OperatorFunctions
+
+        /// <summary>
+        /// Adds the percent character to the text at the currently selected position
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Percent_Click(object sender, EventArgs e)
+        {
+            InsertTextValue("%");
+
+            //focuses the user input text
+            FocusInputText();
+        }
+
+        /// <summary>
+        /// Adds the divide character to the text at the currently selected position
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Divide_Click(object sender, EventArgs e)
+        {
+            InsertTextValue("/");
+
+            //focuses the user input text
+            FocusInputText();
+        }
+
+        /// <summary>
+        /// Adds the multiply character to the text at the currently selected position
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Multiply_Click(object sender, EventArgs e)
+        {
+            InsertTextValue("*");
+
+            //focuses the user input text
+            FocusInputText();
+        }
+
+        /// <summary>
+        /// Adds the minus character to the text at the currently selected position
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Negative_Click(object sender, EventArgs e)
+        {
+            InsertTextValue("-");
+
+            //focuses the user input text
+            FocusInputText();
+        }
+
+        /// <summary>
+        /// Adds the plus character to the text at the currently selected position
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Positive_Click(object sender, EventArgs e)
+        {
+            InsertTextValue("+");
+
+            //focuses the user input text
+            FocusInputText();
+        }
+        private void SUM_Click(object sender, EventArgs e)
+        {
+            CalculateEquation();
+        }
+
+
+
+        #endregion
+
+        /// <summary>
+        /// Calculate the given equation and outputs the answer to the user text box
+        /// </summary>
+        private void CalculateEquation()
+        {
+            
+        }
+
+        #region Private Helpers
+        /// <summary>
+        /// focuses the user input text
+        /// </summary>
+        private void FocusInputText()
+        {
+            this.Sumbox.Focus();
+
+        }
+        /// <summary>
+        /// Inserts the given text into the input text box
+        /// </summary>
+        /// <param name="value">The value to insert</param>
+        private void InsertTextValue(string value)
+        {
+            //remember selection start
+            var selectionStart = this.Sumbox.SelectionStart;
+
+            //set new text
+            this.Sumbox.Text = this.Sumbox.Text.Insert(this.Sumbox.SelectionStart, value);
+
+            //restore the selection start
+            this.Sumbox.SelectionStart = selectionStart + value.Length;
+
+            //Set selection lenght to 1
+            this.Sumbox.SelectionLength = 0;
+        }
+
+        /// <summary>
+        /// Deletes the character to the right of the selection start of the user input text box
+        /// </summary>
+        private void DeleteTextValue()
+        {
+            //If we dont have a value to delete, return
+            if (this.Sumbox.Text.Length < this.Sumbox.SelectionStart + 1)
+                return;
+
+            //remember selection start
+            var selectionStart = this.Sumbox.SelectionStart;
+
+            //Delete the character to the right of the selection
+            this.Sumbox.Text = this.Sumbox.Text.Remove(this.Sumbox.SelectionStart, 1);
+
+            //restore the selection start
+            this.Sumbox.SelectionStart = selectionStart;
+
+            //Set selection lenght to 1
+            this.Sumbox.SelectionLength = 0;
+        }
+        #endregion
     }
 }
