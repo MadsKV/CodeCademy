@@ -7,8 +7,13 @@ let beachDoorPath = "https://s3.amazonaws.com/codecademy-content/projects/chore-
 let spaceDoorPath = "https://s3.amazonaws.com/codecademy-content/projects/chore-door/images/space.svg";
 let closedDoorPath = "https://s3.amazonaws.com/codecademy-content/projects/chore-door/images/closed_door.svg";
 let currentlyPlaying = true
-
 let numClosedDoors = 3;
+let score = 0;
+let highScore = 0;
+let currentStreak = document.getElementById('score-number');
+let bestStreak = document.getElementById('high-score-number');
+currentStreak.innerHTML = score;
+bestStreak.innerHTML = highScore;
 
 let openDoor1;
 let openDoor2;
@@ -103,11 +108,23 @@ const startRound = () => {
 const gameOver = (status) => {
   if (status === 'win') {
   startButton.innerHTML = 'You win! Play again?';
+  getYourScore();
 }
   else {
   startButton.innerHTML = 'Game over! Play again?';
+  score = 0;
+    currentStreak.innerHTML = score;
 }
   currentlyPlaying = false;
+}
+
+const getYourScore = () => {
+  score++;
+  currentStreak.innerHTML = score;
+  if (score > highScore) {
+    highScore = score;
+    bestStreak.innerHTML = highScore;
+  }
 }
 
 
