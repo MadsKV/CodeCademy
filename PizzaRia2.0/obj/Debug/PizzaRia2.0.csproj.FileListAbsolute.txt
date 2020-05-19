@@ -1,0 +1,14 @@
+C:\Users\Mads\source\repos\PizzaRia2.0\PizzaRia2.0\bin\Debug\PizzaRia2.0.exe.config
+C:\Users\Mads\source\repos\PizzaRia2.0\PizzaRia2.0\bin\Debug\PizzaRia2.0.exe
+C:\Users\Mads\source\repos\PizzaRia2.0\PizzaRia2.0\bin\Debug\PizzaRia2.0.pdb
+C:\Users\Mads\source\repos\PizzaRia2.0\PizzaRia2.0\obj\Debug\PizzaRia2._0.Form1.resources
+C:\Users\Mads\source\repos\PizzaRia2.0\PizzaRia2.0\obj\Debug\PizzaRia2._0.Properties.Resources.resources
+C:\Users\Mads\source\repos\PizzaRia2.0\PizzaRia2.0\obj\Debug\PizzaRia2.0.csproj.GenerateResource.cache
+C:\Users\Mads\source\repos\PizzaRia2.0\PizzaRia2.0\obj\Debug\PizzaRia2.0.exe
+C:\Users\Mads\source\repos\PizzaRia2.0\PizzaRia2.0\obj\Debug\PizzaRia2.0.pdb
+C:\Users\Mads\source\repos\PizzaRia2.0\PizzaRia2.0\obj\Debug\PizzaRia2._0.FrontPage.resources
+C:\Users\Mads\source\repos\PizzaRia2.0\PizzaRia2.0\obj\Debug\PizzaRia2._0.CollectionPage.resources
+C:\Users\Mads\source\repos\PizzaRia2.0\PizzaRia2.0\obj\Debug\PizzaRia2._0.EatInPage.resources
+C:\Users\Mads\source\repos\PizzaRia2.0\PizzaRia2.0\obj\Debug\PizzaRia2._0.TakeAwayPage.resources
+C:\Users\Mads\source\repos\PizzaRia2.0\PizzaRia2.0\obj\Debug\PizzaRia2._0.WholeCollection.resources
+C:\Users\Mads\source\repos\PizzaRia2.0\PizzaRia2.0\obj\Debug\PizzaRia2.0.csprojAssemblyReference.cache
