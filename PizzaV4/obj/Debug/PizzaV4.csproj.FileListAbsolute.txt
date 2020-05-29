@@ -1,0 +1,9 @@
+C:\Users\MadsV\source\repos\PizzaV4\PizzaV4\bin\Debug\PizzaV4.exe.config
+C:\Users\MadsV\source\repos\PizzaV4\PizzaV4\bin\Debug\PizzaV4.exe
+C:\Users\MadsV\source\repos\PizzaV4\PizzaV4\bin\Debug\PizzaV4.pdb
+C:\Users\MadsV\source\repos\PizzaV4\PizzaV4\obj\Debug\PizzaV4.csprojAssemblyReference.cache
+C:\Users\MadsV\source\repos\PizzaV4\PizzaV4\obj\Debug\PizzaV4.Form1.resources
+C:\Users\MadsV\source\repos\PizzaV4\PizzaV4\obj\Debug\PizzaV4.Properties.Resources.resources
+C:\Users\MadsV\source\repos\PizzaV4\PizzaV4\obj\Debug\PizzaV4.csproj.GenerateResource.cache
+C:\Users\MadsV\source\repos\PizzaV4\PizzaV4\obj\Debug\PizzaV4.exe
+C:\Users\MadsV\source\repos\PizzaV4\PizzaV4\obj\Debug\PizzaV4.pdb
