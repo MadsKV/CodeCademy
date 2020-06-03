@@ -287,6 +287,7 @@
             this.OwnSize.Name = "OwnSize";
             this.OwnSize.Size = new System.Drawing.Size(169, 51);
             this.OwnSize.TabIndex = 14;
+            this.OwnSize.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.OwnSize_ItemCheck);
             this.OwnSize.SelectedIndexChanged += new System.EventHandler(this.OwnSize_SelectedIndexChanged);
             // 
             // OwnPizza
@@ -338,6 +339,7 @@
             this.SaladSize.Name = "SaladSize";
             this.SaladSize.Size = new System.Drawing.Size(173, 51);
             this.SaladSize.TabIndex = 11;
+            this.SaladSize.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.SaladSize_ItemCheck);
             this.SaladSize.SelectedIndexChanged += new System.EventHandler(this.SaladSize_SelectedIndexChanged);
             // 
             // HamSize
@@ -378,6 +380,7 @@
             this.HamSize.Name = "HamSize";
             this.HamSize.Size = new System.Drawing.Size(173, 51);
             this.HamSize.TabIndex = 10;
+            this.HamSize.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.HamSize_ItemCheck);
             this.HamSize.SelectedIndexChanged += new System.EventHandler(this.HamSize_SelectedIndexChanged);
             // 
             // BeefSize
@@ -418,6 +421,7 @@
             this.BeefSize.Name = "BeefSize";
             this.BeefSize.Size = new System.Drawing.Size(173, 51);
             this.BeefSize.TabIndex = 6;
+            this.BeefSize.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.BeefSize_ItemCheck);
             this.BeefSize.SelectedIndexChanged += new System.EventHandler(this.BeefSize_SelectedIndexChanged);
             // 
             // label8
@@ -535,7 +539,7 @@
             "--Size--",
             "Small....... 1$",
             "Medium",
-            "Big............ 3.25$"});
+            "Large....... 3.25$"});
             this.FaxiSize.Location = new System.Drawing.Point(175, 217);
             this.FaxiSize.Name = "FaxiSize";
             this.FaxiSize.Size = new System.Drawing.Size(173, 51);
@@ -560,7 +564,7 @@
             "--Size--",
             "Small....... 1$",
             "Medium",
-            "Big............ 3.25$"});
+            "Large....... 3.25$"});
             this.FantaSize.Location = new System.Drawing.Point(175, 151);
             this.FantaSize.Name = "FantaSize";
             this.FantaSize.Size = new System.Drawing.Size(173, 51);
@@ -576,7 +580,7 @@
             "--Size--",
             "Small....... 1$",
             "Medium",
-            "Big............ 3.25$"});
+            "Large....... 3.25$"});
             this.ColaSize.Location = new System.Drawing.Point(175, 79);
             this.ColaSize.Name = "ColaSize";
             this.ColaSize.Size = new System.Drawing.Size(173, 51);
@@ -644,7 +648,7 @@
             // 
             this.CalculateBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CalculateBtn.ForeColor = System.Drawing.Color.DarkOrange;
-            this.CalculateBtn.Location = new System.Drawing.Point(594, 667);
+            this.CalculateBtn.Location = new System.Drawing.Point(624, 658);
             this.CalculateBtn.Name = "CalculateBtn";
             this.CalculateBtn.Size = new System.Drawing.Size(103, 57);
             this.CalculateBtn.TabIndex = 18;
@@ -685,6 +689,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

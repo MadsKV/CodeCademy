@@ -12,7 +12,9 @@ namespace PizzaV4
 {
     public partial class Form1 : Form
     {
-
+        public string[] topping = { "Sausage", "Beef", "Kebab", "Salad", "Pepper", "Onions", "Chicken", "Chili", "Garlic" };
+        public double[] toppingP = { 1.24, 1.99, 2.44, 1.24, 1.19, 1.29, 2.99, 0.99, 0.99 };
+        
         public class Pizza
         {
             string _navn;
@@ -43,9 +45,12 @@ namespace PizzaV4
         public Form1()
         {
             InitializeComponent();
-
         }
-
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            BeefSize.Items.Add("Test");
+            
+        }
         private void BeefSize_SelectedIndexChanged(object sender, EventArgs e)
         {
             Pizza BeefPizza = new Pizza("Beef Pizza", "Regular", 14.75);
@@ -54,7 +59,6 @@ namespace PizzaV4
 
         private void HamSize_SelectedIndexChanged(object sender, EventArgs e)
         {
-
             Pizza HamPizza = new Pizza("Ham Pizza", "Regular", 16.99);
             Pizza HamPizzaLarge = new Pizza("Ham Pizza", "Family", 19.99);
         }
@@ -134,10 +138,58 @@ namespace PizzaV4
 
         private void CalculateBtn_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("Please correct your input", "Invalid input", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+        private void BeefSize_ItemCheck(object sender, ItemCheckEventArgs e)
+        {
 
-            
-            
-            //MessageBox.Show("Please correct your input", "Invalid input", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            if (e.NewValue == CheckState.Checked)
+            {
+                SumBox.Items.Add("Beef Pizza.... 14.75");
+                SumBox.Items.Add(BeefSize.SelectedItem.ToString());
+            }
+           else
+            {
+                SumBox.Items.Remove("Beef Pizza.... 14.75");
+                SumBox.Items.Remove(BeefSize.SelectedItem.ToString());
+                
+            }
+        }
+
+        private void HamSize_ItemCheck(object sender, ItemCheckEventArgs e)
+        {
+            if (e.NewValue == CheckState.Checked)
+            {
+                SumBox.Items.Add(HamSize.SelectedItem.ToString());
+            }
+            else
+            {
+                SumBox.Items.Remove(HamSize.SelectedItem.ToString());
+            }
+        }
+
+        private void SaladSize_ItemCheck(object sender, ItemCheckEventArgs e)
+        {
+            if (e.NewValue == CheckState.Checked)
+            {
+                SumBox.Items.Add(SaladSize.SelectedItem.ToString());
+            }
+            else
+            {
+                SumBox.Items.Remove(SaladSize.SelectedItem.ToString());
+            }
+        }
+
+        private void OwnSize_ItemCheck(object sender, ItemCheckEventArgs e)
+        {
+            if (e.NewValue == CheckState.Checked)
+            {
+                SumBox.Items.Add(OwnSize.SelectedItem.ToString());
+            }
+            else
+            {
+                SumBox.Items.Remove(OwnSize.SelectedItem.ToString());
+            }
         }
     }
 }
