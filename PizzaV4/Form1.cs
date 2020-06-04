@@ -48,13 +48,14 @@ namespace PizzaV4
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-            BeefSize.Items.Add("Test");
+            
             
         }
         private void BeefSize_SelectedIndexChanged(object sender, EventArgs e)
         {
             Pizza BeefPizza = new Pizza("Beef Pizza", "Regular", 14.75);
             Pizza BeefPizzaLarge = new Pizza("Beef Pizza", "Family", 17.75);
+    
         }
 
         private void HamSize_SelectedIndexChanged(object sender, EventArgs e)
@@ -140,55 +141,175 @@ namespace PizzaV4
         {
             MessageBox.Show("Please correct your input", "Invalid input", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
+
+        List<Object> listTemp = new List<object>();
         private void BeefSize_ItemCheck(object sender, ItemCheckEventArgs e)
         {
+            //if (BeefSize.CheckedItems.Count >= 0)
+            //{
+            //    SumBox.Items.Add(BeefSize.SelectedItem);
+            //}
 
             if (e.NewValue == CheckState.Checked)
             {
-                SumBox.Items.Add("Beef Pizza.... 14.75");
-                SumBox.Items.Add(BeefSize.SelectedItem.ToString());
-            }
-           else
-            {
-                SumBox.Items.Remove("Beef Pizza.... 14.75");
-                SumBox.Items.Remove(BeefSize.SelectedItem.ToString());
-                
-            }
-        }
-
-        private void HamSize_ItemCheck(object sender, ItemCheckEventArgs e)
-        {
-            if (e.NewValue == CheckState.Checked)
-            {
-                SumBox.Items.Add(HamSize.SelectedItem.ToString());
+                listTemp.Add(BeefSize.SelectedItem);
+                //SumBox.Items.Clear();
+                //foreach (var topping in BeefSize.CheckedItems)
+                //{
+                //    if (!SumBox.Items.Contains(BeefSize.SelectedItem))
+                //    {
+                //        SumBox.Items.Add(topping.ToString());
+                        
+                //    }
+                //    foreach (var sumItem in SumBox.Items)
+                //    {
+                //        if (topping != sumItem)
+                //        {
+                            
+                //            break;
+                //        }
+                //    }
+                //}
             }
             else
             {
-                SumBox.Items.Remove(HamSize.SelectedItem.ToString());
+                listTemp.Remove(BeefSize.SelectedItem);
+                //SumBox.Items.Remove("Beef Pizza.... 14.75$");
+                //SumBox.Items.Remove(BeefSize.SelectedItem.ToString());
+            }
+            Total_list();
+            //SumBox.Items.Clear();
+            //SumBox.Items.Add("Beef Pizza 14.75$");
+            //listTemp.Sort();
+            //foreach (var item in listTemp)
+            //{
+            //    SumBox.Items.Add(item);
+            //}
+        }
+        List<Object> listTemp2 = new List<object>();
+        private void HamSize_ItemCheck(object sender, ItemCheckEventArgs e)
+        {
+
+            if (e.NewValue == CheckState.Checked)
+            {
+                listTemp2.Add(HamSize.SelectedItem);
+            }
+            else
+            {
+                listTemp2.Remove(HamSize.SelectedItem);
+            }
+
+            SumBox.Items.Clear();
+            SumBox.Items.Add("Ham Pizza 16.99$");
+            listTemp2.Sort();
+            foreach (var item in listTemp2)
+            {
+                SumBox.Items.Add(item);
             }
         }
-
+        List<Object> listTemp3 = new List<object>();
         private void SaladSize_ItemCheck(object sender, ItemCheckEventArgs e)
         {
             if (e.NewValue == CheckState.Checked)
             {
-                SumBox.Items.Add(SaladSize.SelectedItem.ToString());
+                listTemp3.Add(SaladSize.SelectedItem);
             }
             else
             {
-                SumBox.Items.Remove(SaladSize.SelectedItem.ToString());
+                listTemp3.Remove(SaladSize.SelectedItem);
+            }
+
+            SumBox.Items.Clear();
+            SumBox.Items.Add("Salad Pizza 15.45$");
+            listTemp3.Sort();
+            foreach (var item in listTemp3)
+            {
+                SumBox.Items.Add(item);
             }
         }
-
+        List<Object> listTemp4 = new List<object>();
         private void OwnSize_ItemCheck(object sender, ItemCheckEventArgs e)
         {
             if (e.NewValue == CheckState.Checked)
             {
-                SumBox.Items.Add(OwnSize.SelectedItem.ToString());
+                listTemp4.Add(OwnSize.SelectedItem);
             }
             else
             {
-                SumBox.Items.Remove(OwnSize.SelectedItem.ToString());
+                listTemp4.Remove(OwnSize.SelectedItem);
+            }
+
+            SumBox.Items.Clear();
+            SumBox.Items.Add("Own Pizza 15.00$");
+            listTemp4.Sort();
+            foreach (var item in listTemp4)
+            {
+                SumBox.Items.Add(item);
+            }
+
+        }
+
+        private void Sorter()
+        {
+            foreach (var list in BeefSize.Items)
+            {
+
+            }
+        }
+
+        List<Object> totalList = new List <object>();
+        private void Total_list()
+        {
+            totalList.Clear();
+            SumBox.Items.Clear();
+            //listTemp.Sort();
+            //listTemp2.Sort();
+            //listTemp3.Sort();
+            //listTemp4.Sort();
+            totalList.AddRange(listTemp);
+            totalList.AddRange(listTemp2);
+            totalList.AddRange(listTemp3);
+            totalList.AddRange(listTemp4);
+
+            foreach (var item in totalList)
+            {
+                SumBox.Items.Add(item);
+
+            }
+        }
+        private void ColaSize_ItemCheck(object sender, ItemCheckEventArgs e)
+        {
+            if (e.NewValue == CheckState.Checked)
+            {
+                SumBox.Items.Add(ColaSize.SelectedItem.ToString());
+            }
+            else
+            {
+                SumBox.Items.Remove(ColaSize.SelectedItem.ToString());
+            }
+        }
+
+        private void FantaSize_ItemCheck(object sender, ItemCheckEventArgs e)
+        {
+            if (e.NewValue == CheckState.Checked)
+            {
+                SumBox.Items.Add(FantaSize.SelectedItem.ToString());
+            }
+            else
+            {
+                SumBox.Items.Remove(FantaSize.SelectedItem.ToString());
+            }
+        }
+
+        private void FaxiSize_ItemCheck(object sender, ItemCheckEventArgs e)
+        {
+            if (e.NewValue == CheckState.Checked)
+            {
+                SumBox.Items.Add(FaxiSize.SelectedItem.ToString());
+            }
+            else
+            {
+                SumBox.Items.Remove(FaxiSize.SelectedItem.ToString());
             }
         }
     }

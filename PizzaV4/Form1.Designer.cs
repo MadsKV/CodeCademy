@@ -255,7 +255,7 @@
             this.OwnSize.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.OwnSize.FormattingEnabled = true;
             this.OwnSize.Items.AddRange(new object[] {
-            "--Size--",
+            "--Pizza Size--",
             "Regular",
             "Family Size + 3$",
             "--Dough--",
@@ -307,7 +307,7 @@
             this.SaladSize.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.SaladSize.FormattingEnabled = true;
             this.SaladSize.Items.AddRange(new object[] {
-            "--Size--",
+            "--Pizza Size--",
             "Regular",
             "Family Size + 3$",
             "--Dough--",
@@ -348,7 +348,7 @@
             this.HamSize.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.HamSize.FormattingEnabled = true;
             this.HamSize.Items.AddRange(new object[] {
-            "--Size--",
+            "--Pizza Size--",
             "Regular",
             "Family Size + 3$",
             "--Dough--",
@@ -389,7 +389,7 @@
             this.BeefSize.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.BeefSize.FormattingEnabled = true;
             this.BeefSize.Items.AddRange(new object[] {
-            "--Size--",
+            "--Pizza Size--",
             "Regular",
             "Family Size + 3$",
             "--Dough--",
@@ -536,7 +536,7 @@
             this.FaxiSize.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.FaxiSize.FormattingEnabled = true;
             this.FaxiSize.Items.AddRange(new object[] {
-            "--Size--",
+            "--Drink Size--",
             "Small....... 1$",
             "Medium",
             "Large....... 3.25$"});
@@ -544,6 +544,7 @@
             this.FaxiSize.Name = "FaxiSize";
             this.FaxiSize.Size = new System.Drawing.Size(173, 51);
             this.FaxiSize.TabIndex = 21;
+            this.FaxiSize.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.FaxiSize_ItemCheck);
             this.FaxiSize.SelectedIndexChanged += new System.EventHandler(this.FaxiSize_SelectedIndexChanged);
             // 
             // ColaAmount
@@ -561,7 +562,7 @@
             this.FantaSize.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.FantaSize.FormattingEnabled = true;
             this.FantaSize.Items.AddRange(new object[] {
-            "--Size--",
+            "--Drink Size--",
             "Small....... 1$",
             "Medium",
             "Large....... 3.25$"});
@@ -569,6 +570,7 @@
             this.FantaSize.Name = "FantaSize";
             this.FantaSize.Size = new System.Drawing.Size(173, 51);
             this.FantaSize.TabIndex = 20;
+            this.FantaSize.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.FantaSize_ItemCheck);
             this.FantaSize.SelectedIndexChanged += new System.EventHandler(this.FantaSize_SelectedIndexChanged);
             // 
             // ColaSize
@@ -577,7 +579,7 @@
             this.ColaSize.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.ColaSize.FormattingEnabled = true;
             this.ColaSize.Items.AddRange(new object[] {
-            "--Size--",
+            "--Drink Size--",
             "Small....... 1$",
             "Medium",
             "Large....... 3.25$"});
@@ -585,6 +587,7 @@
             this.ColaSize.Name = "ColaSize";
             this.ColaSize.Size = new System.Drawing.Size(173, 51);
             this.ColaSize.TabIndex = 16;
+            this.ColaSize.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.ColaSize_ItemCheck);
             this.ColaSize.SelectedIndexChanged += new System.EventHandler(this.ColaSize_SelectedIndexChanged);
             // 
             // Faxi
